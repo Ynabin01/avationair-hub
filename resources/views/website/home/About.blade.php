@@ -95,9 +95,10 @@
 
     <!-- Left Image -->
     <div class="col-lg-6 col-md-12 text-center mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
-      <img class="img-fluid advanced-image" src="{!! htmlspecialchars_decode($about->banner_image ?? '') !!}"
-        alt="About Banner">
+      <img src="{!! htmlspecialchars_decode($about->banner_image ?? '') !!}" alt="About Banner"
+        style="width:400px; height:240px; max-width:100%;">
     </div>
+
 
     <!-- Right Content -->
     <div class="col-lg-6 col-md-12" data-aos="fade-left" data-aos-duration="1200">
@@ -117,7 +118,7 @@
         </p>
 
         <!-- Explore Button -->
-        <a href="/about-one/guidance-session" class="btn btn-advance">
+        <a href="/about-one/about-us-two" class="btn btn-advance">
           Explore More <span class="ms-2">&rarr;</span>
         </a>
       </div>
@@ -125,5 +126,3 @@
 
   </div>
 </div>
-
- 

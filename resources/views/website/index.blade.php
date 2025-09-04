@@ -8,6 +8,7 @@
     @include('website.home.study') 
     @include('website.home.gallery')
     @include('website.home.partners') 
+     @include('website.home.testimonial') 
     @include('website.home.team') 
     @include('website.home.blog')  
 @endsection

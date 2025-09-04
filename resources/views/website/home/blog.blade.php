@@ -4,9 +4,9 @@
                 <br>
             <div class="col-12 mb-5" data-aos="fade-up" data-aos-duration="1200">
                 <h2 class="mv-section-title">
-                      <span class="mission"> Your source for </span>
-                    <span class="vision">up-to-date</span> 
-                    <span class="values">Blogs</span>
+                      <span class="mission"> Recent  </span>
+                    <span class="vision">Blog</span> 
+                    <span class="values">Post</span>
                 </h2>
             </div>
                 
@@ -126,4 +126,7 @@
 .blog-gallery-item:hover img {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
+
+
+
 </style>

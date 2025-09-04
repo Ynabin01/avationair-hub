@@ -131,9 +131,12 @@
                         <div class="col-md-6 col-lg-3 which">
                             <a href="@if (count($universities->childs) != 0) {{$slug1->nav_name}}/{{$universities->nav_name}} @else # @endif">
                                 <div class="sec-univ-card">
-                                    <div class="sec-univ-image">
-                                        <img src="{{$universities->banner_image ?? ""}}" alt="University Image">
+                                   <div class="sec-univ-image">
+                                        <img src="{{$universities->banner_image ?? ''}}" 
+                                            alt="University Image" 
+                                            style="width:100%; height:190px; display:block; border-radius:10px;">
                                     </div>
+
                                     <div class="sec-univ-details">
                                         <?php
                                             $country = [];
@@ -184,6 +187,7 @@
                                             $location = isset($shortContentArray[1]) ? $shortContentArray[1] : "";
                                             @endphp
                                             {{$location}}
+                                            
                                         </div>
                                     </div>
                                 </div>

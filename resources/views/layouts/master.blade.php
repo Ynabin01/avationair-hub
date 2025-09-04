@@ -28,13 +28,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Education Air Hub Nepal Pvt. Ltd.</title>
+    <title>Aviation Hub Nepal Pvt.Ltd..</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="{{ $seo->meta_keywords ?? '' }}">
     <meta name="description" content="{{ $seo->meta_description ?? '' }}">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('website/img/favicon.ico') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('website/img/logo.PNG') }}">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,9 +94,8 @@
                         <i class="fab fa-facebook-f"></i>
                     </a>
                     <a href="{{ $global_setting->twitter ?? '#' }}" target="_blank"
-                        class="rounded-circle d-flex align-items-center justify-content-center"
-                        style="width: 36px; height: 36px; background:#1da1f2; color:white; transition:.3s;">
-                        <i class="fab fa-twitter"></i>
+                        style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background:#000; color:white; border-radius: 50%; transition: .3s;">
+                        <i class="fab fa-x"></i>
                     </a>
                     <a href="{{ $global_setting->linkedin ?? '#' }}" target="_blank"
                         class="rounded-circle d-flex align-items-center justify-content-center"
@@ -114,8 +113,7 @@
     <!-- Navbar Start -->
     <div class="container-xxl position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-0 upri-navbar"
-            style="background-color: rgba(18, 62, 207, 1); height:git init
- 60px;">
+            style="background-color: rgba(18, 62, 207, 1); height: 60px;">
 
             <!-- Logo -->
             <a href="/" class="image-hder navbar-brand d-flex justify-content-center align-items-center p-0"
@@ -137,7 +135,7 @@
                         <div class="nav-item @if ($menu->childs->count() > 0) dropdown @endif">
                             <a href="@if($menu->nav_name == 'aboutus' || $menu->nav_name == 'notice' || $menu->nav_name == 'gallery') # 
                             @elseif ($menu->nav_name == 'blog') /{{ $menu->nav_name }}?content=blogs 
-                                    @else /{{ $menu->nav_name }} @endif"
+                                @else /{{ $menu->nav_name }} @endif"
                                 class="nav-link @if ($menu->childs->count() > 0 && !in_array($menu->id, ['2752', '2751', '2756'])) dropdown-toggle @endif"
                                 @if ($menu->childs->count() > 0 && !in_array($menu->id, ['2752', '2751', '2756']))
                                 data-bs-toggle="dropdown" role="button" aria-expanded="false" @endif>
@@ -178,7 +176,7 @@
                     <div class="mobile-nav-item">
                         <a href="@if($menu->nav_name == 'aboutus' || $menu->nav_name == 'notice' || $menu->nav_name == 'gallery') # 
                          @elseif ($menu->nav_name == 'blog') /{{ $menu->nav_name }}?content=blogs 
-                                 @else /{{ $menu->nav_name }} @endif" class="mobile-nav-link">{{ $menu->caption }}</a>
+                             @else /{{ $menu->nav_name }} @endif" class="mobile-nav-link">{{ $menu->caption }}</a>
 
                         @if ($menu->childs->count() > 0 && !in_array($menu->id, ['2415', '2537', '2752', '2751', '2756']))
                             <div class="mobile-submenu">
@@ -217,108 +215,302 @@
         }
 
         /* Mobile overlay menu */
+        /* Mobile overlay menu clean style */
         #mobileMenuOverlay {
             position: fixed;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background-color: rgba(18, 62, 207, 0.97);
+            background-color: #fff;
+            /* clean white background */
             z-index: 9999;
             transition: left 0.35s ease;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            padding: 70px 20px 30px;
+            padding: 60px 20px 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
 
+        /* Slide-in effect */
         #mobileMenuOverlay.active {
             left: 0;
-            animation: slideIn 0.35s ease;
+            animation: fadeSlideIn 0.35s ease forwards;
         }
 
-        @keyframes slideIn {
-            from {
+        @keyframes fadeSlideIn {
+            0% {
                 left: -100%;
+                opacity: 0;
             }
 
-            to {
+            100% {
                 left: 0;
+                opacity: 1;
             }
         }
 
-        /* Close button hidden by default */
+        /* Close button */
         #mobileMenuClose {
             position: fixed;
             top: 20px;
             right: 20px;
-            font-size: 32px;
-            color: #fff;
+            font-size: 28px;
+            color: #333;
             cursor: pointer;
             z-index: 10000;
-            display: none;
-            /* hidden by default */
+        }
+
+        /* Contact info section */
+        #mobileMenuOverlay .contact-info {
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        #mobileMenuOverlay .contact-info a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        #mobileMenuOverlay .contact-info a:hover {
+            color: #007BFF;
         }
 
         /* Menu body */
         .mobile-menu-body {
             display: flex;
             flex-direction: column;
-            gap: 12px;
         }
 
         /* Main links */
         .mobile-nav-link {
-            font-size: 18px;
-            font-weight: 600;
-            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            color: #333;
             text-decoration: none;
-            padding: 10px 0;
+            padding: 12px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
             transition: color 0.3s;
         }
 
         .mobile-nav-link:hover {
-            color: red;
+            color: #007BFF;
+        }
+
+        /* Submenu toggle "+" */
+        .mobile-nav-item>.mobile-nav-link::after {
+            content: '+';
+            font-size: 16px;
+            color: #555;
+            transition: transform 0.3s;
+        }
+
+        .mobile-nav-item.active>.mobile-nav-link::after {
+            transform: rotate(45deg);
+            /* turn + into × when open */
         }
 
         /* Submenu */
         .mobile-submenu {
-            padding-left: 18px;
-            margin-top: 5px;
+            padding-left: 15px;
             display: none;
-            /* hidden by default */
             flex-direction: column;
-            gap: 8px;
+            gap: 5px;
         }
 
         .mobile-submenu.active {
             display: flex;
-            animation: slideDown 0.3s ease;
+            animation: submenuFadeSlide 0.3s ease forwards;
         }
 
-        @keyframes slideDown {
-            from {
+        @keyframes submenuFadeSlide {
+            0% {
                 opacity: 0;
                 transform: translateY(-5px);
             }
 
-            to {
+            100% {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
+        /* Submenu links */
         .mobile-submenu-link {
-            font-size: 16px;
-            color: #eaeaea;
+            font-size: 15px;
+            color: #555;
             text-decoration: none;
+            padding: 6px 0;
             transition: color 0.3s;
         }
 
         .mobile-submenu-link:hover {
-            color: red;
+            color: #007BFF;
         }
 
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            #navbarCollapse {
+                display: none !important;
+            }
+        }
+
+        /* Mobile overlay menu */
+        #mobileMenuOverlay {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 20px 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+            overflow-y: auto;
+            transition: left 0.35s ease;
+        }
+
+        /* Slide-in overlay */
+        #mobileMenuOverlay.active {
+            left: 0;
+            animation: overlayFadeSlide 0.35s ease forwards;
+        }
+
+        @keyframes overlayFadeSlide {
+            0% {
+                left: -100%;
+                opacity: 0;
+            }
+
+            100% {
+                left: 0;
+                opacity: 1;
+            }
+        }
+
+        /* Close button */
+        #mobileMenuClose {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            color: #333;
+            cursor: pointer;
+            z-index: 10000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #mobileMenuOverlay.active+#mobileMenuClose,
+        #mobileMenuClose.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Contact info */
+        #mobileMenuOverlay .contact-info {
+            margin-bottom: 20px;
+            font-size: 13px;
+            /* smaller text */
+            line-height: 1.4;
+            color: #333;
+        }
+
+        #mobileMenuOverlay .contact-info a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        #mobileMenuOverlay .contact-info a:hover {
+            color: #007BFF;
+        }
+
+        /* Menu items */
+        .mobile-menu-body {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            /* smaller gap between menu items */
+        }
+
+        /* Main links */
+        .mobile-nav-link {
+            font-size: 15px;
+            /* smaller text */
+            font-weight: 700;
+            /* bold text */
+            color: #333;
+            text-decoration: none;
+            padding: 8px 0;
+            /* less padding */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-link:hover {
+            color: #007BFF;
+        }
+
+        /* Submenu toggle "+" */
+        .mobile-nav-item>.mobile-nav-link::after {
+            content: '+';
+            font-size: 16px;
+            font-weight: 700;
+            /* bold plus sign */
+            color: #555;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-nav-item.active>.mobile-nav-link::after {
+            transform: rotate(45deg);
+        }
+
+        /* Submenu */
+        .mobile-submenu {
+            padding-left: 15px;
+            max-height: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            transition: max-height 0.35s ease, opacity 0.35s ease;
+            opacity: 0;
+        }
+
+        .mobile-submenu.active {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        /* Submenu links */
+        .mobile-submenu-link {
+            font-size: 14px;
+            /* smaller text */
+            font-weight: 700;
+            /* bold submenu text */
+            color: #555;
+            text-decoration: none;
+            padding: 6px 0;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-submenu-link:hover {
+            color: #007BFF;
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 991px) {
             #navbarCollapse {
                 display: none !important;
@@ -387,7 +579,7 @@
                 <!-- Logo & Description -->
                 <div class="col-md-6 col-lg-4">
                     <img src="/uploads/icons/{{ $global_setting->site_logo }}" alt="Logo" class="img-fluid mb-3"
-                        style="height: 120px; width: 100%;">
+                        style="height: 145px; width: 60%;">
                     <p class="footer-text">
                         {{ $global_setting->site_description ?? 'We provide quality education consultancy services.' }}
                     </p>
@@ -416,10 +608,21 @@
                         <li><strong>Address:</strong> {{ $global_setting->address ?? 'Putalisadak, Kathmandu, Nepal' }}
                         </li>
                         <li class="mt-2 footer-social">
-                            <a href="{{ $global_setting->facebook ?? '#' }}" target="_blank">Facebook</a>
-                            <a href="{{ $global_setting->twitter ?? '#' }}" target="_blank">Twitter</a>
-                            <a href="{{ $global_setting->instagram ?? '#' }}" target="_blank">Instagram</a>
+                            <a href="{{ $global_setting->facebook ?? '#' }}" target="_blank"
+                                class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="{{ $global_setting->twitter ?? '#' }}" target="_blank" class="social-icon twitter">
+                                <i class="fab fa-x"></i>
+                            </a>
+                            <a href="{{ $global_setting->linkedin ?? '#' }}" target="_blank"
+                                class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </li>
+
+
+
                     </ul>
                 </div>
 
@@ -551,8 +754,45 @@
             cursor: unset;
             background-color: unset;
         }
-    </style>
 
+        /* Desktop/default styles */
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            color: white;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .social-icon.facebook {
+            background: #3b5998;
+        }
+
+        .social-icon.twitter {
+            background: #000;
+        }
+
+        .social-icon.instagram {
+            background: #e4405f;
+        }
+
+        /* Responsive: center on small screens */
+        @media (max-width: 576px) {
+            .footer-social {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
 </body>
 
 </html>

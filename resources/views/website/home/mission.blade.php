@@ -1,346 +1,290 @@
-<!-- Mission, Vision, Values Section - Blue Theme -->
-<div id="unique-container" class="container py-6"></div>
-<div class="container py-5" style="margin-top: -80px;">
-    <div class="row text-center g-4">
+<!-- Modern Split MVV Section (Clean Image Layout, No Blur) -->
+<div class="mvv2-split-section container">
+  <div class="row align-items-center g-5">
+    <!-- Left Images -->
+    <div class="col-lg-6 d-flex">
+      <!-- Big Image (always visible) -->
+      <div class="mvv2-left flex-grow-2" data-aos="fade-right" data-aos-duration="1000">
+        <img src="/website/img/Good-Airline-Pilot.webp" alt="Big Image" class="mvv2-img mvv2-big" />
+      </div>
 
-        <!-- Section Header -->
-        <div class="col-12 mb-5" data-aos="fade-up" data-aos-duration="1200">
-            <h2 class="mv-section-title">
-                Our <span class="mission">Mission</span>,
-                <span class="vision">Vision</span> &
-                <span class="values">Values</span>
-            </h2>
-            <p class="mv-section-desc">
-                Committed to excellence in educational guidance, helping students achieve their global aspirations.
-            </p>
-        </div>
-
-        <div class="row g-4 justify-content-center">
-
-            <!-- Mission Card -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000"
-                style=" margin-right: -20px; margin-top: -35px;     margin-bottom: 50px !important;">
-                <div class="mv-card-glass h-100 p-4 text-center position-relative overflow-hidden">
-                    <div class="mv-icon-circle mb-3">
-                        <i class="fas fa-bullseye fa-3x"></i>
-                    </div>
-                    <h5 class="fw-bold mb-2 text-gradient-mission">Mission</h5>
-                    <p>
-                        Provide students with comprehensive support and guidance to achieve their educational goals
-                        globally.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Vision Card -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1200"
-                style=" margin-right: -20px; margin-top: -35px;     margin-bottom: 50px !important;">
-                <div class="mv-card-glass h-100 p-4 text-center position-relative overflow-hidden">
-                    <div class="mv-icon-circle mb-3 vision-icon">
-                        <i class="fas fa-eye fa-3x"></i>
-                    </div>
-                    <h5 class="fw-bold mb-2 text-gradient-vision">Vision</h5>
-                    <p class=".mv-card-glass">
-                        To be a leading educational consultancy recognized for excellence, trust, and global impact.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Values Card -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1400"
-                style=" margin-right: -20px; margin-top: -35px;     margin-bottom: 50px !important;">
-                <div class="mv-card-glass h-100 p-4 text-center position-relative overflow-hidden">
-                    <div class="mv-icon-circle mb-3 values-icon">
-                        <i class="fas fa-handshake fa-3x"></i>
-                    </div>
-                    <h5 class="fw-bold mb-2 text-gradient-values">Values</h5>
-                    <p>
-                        Integrity, Excellence, Commitment, and Innovation guide everything we do in helping students
-                        succeed.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
+      <!-- Right Stacked Images (HIDDEN on mobile) -->
+      <div class="mvv2-right d-flex flex-column justify-content-between ms-3 d-none d-lg-flex" data-aos="fade-left"
+        data-aos-duration="1000">
+        <img src="/website/img/mis.jpg" alt="Medium Image" class="mvv2-img mvv2-medium mb-3" />
+        <img src="/website/img/a1.jpg" alt="Small Image" class="mvv2-img mvv2-small" />
+      </div>
     </div>
-</div>
+
+    <!-- Right Content -->
+    <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1200">
+      <span class="mvv2-subtitle">Know About Us</span>
+      <h2 class="mvv2-title">Education Air <span>Hub Nepal</span></h2>
+      <p class="mvv2-desc" style="font-size: 1rem; line-height: 1.6; color: #333;">
+       Aviation Hub Nepal is a trusted educational consultancy, providing expert guidance and support for students seeking higher education opportunities both locally and abroad.
+      </p>
+
+      <div class="mvv2-items mt-4">
+        <div class="mvv2-item">
+          <div class="mvv2-icon mvv2-icon-mission"><i class="fas fa-bullseye"></i></div>
+          <div class="mvv2-text">
+            <h5>Mission</h5>
+            <p>Providing students with reliable, precise, and impartial information to foster effective learning.</p>
+          </div>
+        </div>
+        <div class="mvv2-item">
+          <div class="mvv2-icon mvv2-icon-vision"><i class="fas fa-eye"></i></div>
+          <div class="mvv2-text">
+            <h5>Vision</h5>
+            <p>Aviation Hub Nepal aims to establish itself as the country's primary destination for international studies.</p>
+          </div>
+        </div>
+        <div class="mvv2-item">
+          <div class="mvv2-icon mvv2-icon-values"><i class="fas fa-handshake"></i></div>
+          <div class="mvv2-text">
+            <h5>Values</h5>
+            <p>Integrity, Excellence, Commitment, and Innovation guide everything we do in helping students succeed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br><br><br>
 </div>
 
-<!-- Font Awesome -->
+<!-- Font Awesome & AOS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init();</script>
 
 <style>
-    /* Section title */
-    .mv-section-title {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #0d3b66;
+  /* Section Padding */
+
+  /* Image Layout */
+  .mvv2-left,
+  .mvv2-right img {
+    position: relative;
+  }
+
+  /* Remove overlay blur */
+  .mvv2-overlay-container,
+  .mvv2-blue-overlay {
+    display: none !important;
+  }
+
+  /* Images */
+  .mvv2-img {
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .mvv2-img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Big Image */
+  .mvv2-big {
+    width: 350px;
+    height: 500px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+
+  /* Right Stacked Images */
+  .mvv2-medium {
+    width: 135%;
+    margin-left: -51px;
+    height: 200px;
+  }
+
+  .mvv2-small {
+    width: 135%;
+    height: 400px;
+    margin-left: -51px;
+  }
+
+  .mvv2-left {
+    flex: 2;
+    margin-right: 20px;
+  }
+
+  .mvv2-right {
+    flex: 1;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Right Content */
+  .mvv2-subtitle {
+    display: inline-block;
+    color: #ff6b6b;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
+
+  .mvv2-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  .mvv2-title span {
+    color: #1e90ff;
+  }
+
+  .mvv2-desc {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* MVV Items */
+  .mvv2-items {
+    margin-top: 2rem;
+  }
+
+  .mvv2-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .mvv2-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+
+  .mvv2-icon-mission {
+    background: #ff6b6b;
+  }
+
+  .mvv2-icon-vision {
+    background: #1e90ff;
+  }
+
+  .mvv2-icon-values {
+    background: #ffa500;
+  }
+
+  .mvv2-text h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .mvv2-text p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .mvv2-split-section {
+      padding-top: 60px;
+      padding-bottom: 0px;
     }
 
-    .mv-section-desc {
-        font-size: 1rem;
-        color: #0d3b66;
-        max-width: 600px;
-        margin: 0 auto;
+    .mvv2-split-section .col-lg-6.d-flex {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+      margin-top: -23px !important;
     }
 
-    .mv-card-glass p {
-        color: #000;
+    .mvv2-right {
+      display: none !important;
     }
 
-    /* Card styling */
-    .mv-card-blue {
-        background: linear-gradient(135deg, #1e3c72, #2a5298, #1e3c72);
-        border-radius: 20px;
-        color: #fff;
-        transition: all 0.5s ease;
-        position: relative;
+    /* Big Image responsive */
+  
+
+    .mvv2-subtitle {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      font-size: 0.85rem;
+      text-align: center;
+      margin-left: 25%;
     }
 
-    /* Colorful corner effects using pseudo-elements */
-    .mv-card-blue::before,
-    .mv-card-blue::after {
-        content: '';
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        z-index: 1;
-        opacity: 0.3;
+    .mvv2-title {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 15px;
     }
 
-    .mv-card-blue::before {
-        top: -10px;
-        left: -10px;
-        background: #55aaff;
+    .mvv2-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0 10px 20px;
+      text-align: center;
     }
 
-    .mv-card-blue::after {
-        bottom: -10px;
-        right: -10px;
-        background: #0077cc;
+    .mvv2-items {
+      margin: 0 10px;
     }
 
-    /* Icon circle */
-    .mv-icon-blue {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 15px auto;
-        transition: all 0.5s ease;
-        z-index: 2;
-        position: relative;
+    .mvv2-item {
+      margin-bottom: 1.5rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
-    .mv-icon-blue i {
-        color: #fff;
+    .mvv2-icon {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .mvv2-big {
+      width: 106%;
+      height: auto;
+      margin-bottom: -50px;
+      border-radius: 10px;
+    }
+    
+
+    .mvv2-title {
+      font-size: 1.5rem;
     }
 
-    /* Hover effect */
-    .mv-card-blue:hover {
-        transform: translateY(-10px) scale(1.03);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    .mvv2-desc {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Tablet (768px - 992px) */
+  @media (min-width: 768px) and (max-width: 992px) {
+    .mvv2-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
 
-    .mv-card-blue:hover .mv-icon-blue {
-        transform: rotate(15deg) scale(1.1);
-        background: rgba(255, 255, 255, 0.3);
+    .mvv2-desc {
+      font-size: 1rem;
+      margin: 0 20px 25px;
     }
 
-    /* Responsive */
-    @media (max-width: 991px) {
-        .mv-card-blue {
-            margin-bottom: 20px;
-        }
+    .mvv2-items {
+      margin: 0 20px;
     }
-
-    @media (max-width: 576px) {
-        .mv-section-title {
-            font-size: 1.6rem;
-        }
-
-        .mv-section-desc {
-            font-size: 0.95rem;
-        }
-    }
-
-    /* mission vision */
-
-    .mv-section-title {
-        font-size: 2rem;
-        font-weight: 800;
-        text-align: center;
-        margin: 40px 0;
-        position: relative;
-    }
-
-    /* colorful parts */
-    .mv-section-title .mission {
-        color: #ff512f;
-        /* orange-red */
-    }
-
-    .mv-section-title .vision {
-        color: #24c6dc;
-        /* sky blue */
-    }
-
-    .mv-section-title .values {
-        color: yellow;
-        /* deep purple */
-    }
-
-    /* underline animation */
-    .mv-section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        width: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #ff512f, #24c6dc, #514a9d);
-        border-radius: 50px;
-        transform: translateX(-50%);
-        animation: underlineGrow 2s ease forwards;
-    }
-
-    @keyframes underlineGrow {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 200px;
-        }
-    }
-
-    /* responsive */
-    @media (max-width: 768px) {
-        .mv-section-title {
-            font-size: 1.6rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .mv-section-title {
-            font-size: 1.3rem;
-        }
-    }
-
-    /* Glass-style cards */
-    .mv-card-glass {
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(12px);
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: #fff;
-        transition: all 0.5s ease;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        min-height: 340px;
-        /* you can tweak (320–380px works best) */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* center all content */
-        padding: 2rem 1.5rem;
-    }
-
-    /* Hover glowing border */
-    .mv-card-glass::before {
-        content: "";
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        width: calc(100% + 4px);
-        height: calc(100% + 4px);
-        border-radius: 22px;
-        background: linear-gradient(90deg, #ff512f, #24c6dc, #514a9d, #ff512f);
-        background-size: 300% 300%;
-        z-index: 0;
-        animation: borderMove 6s linear infinite;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    .mv-card-glass:hover::before {
-        opacity: 1;
-    }
-
-    @keyframes borderMove {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-
-    /* Keep content above glowing effect */
-    .mv-card-glass>* {
-        position: relative;
-        z-index: 2;
-    }
-
-    /* Icon circles */
-    .mv-icon-circle {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 15px auto;
-        background: linear-gradient(135deg, #ff512f, #dd2476);
-        color: #fff;
-        transition: transform 0.5s ease;
-    }
-
-    .vision-icon {
-        background: linear-gradient(135deg, #24c6dc, #514a9d);
-    }
-
-    .values-icon {
-        background: linear-gradient(135deg, #43e97b, #38f9d7);
-    }
-
-    .mv-card-glass:hover .mv-icon-circle {
-        transform: scale(1.15) rotate(10deg);
-    }
-
-    /* Gradient titles */
-    .text-gradient-mission {
-        background: linear-gradient(45deg, #ff512f, #dd2476);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .text-gradient-vision {
-        background: linear-gradient(45deg, #24c6dc, #514a9d);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .text-gradient-values {
-        background: linear-gradient(45deg, #43e97b, #38f9d7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    /* Floating subtle animation */
-    .mv-card-glass:hover {
-        transform: translateY(-12px) scale(1.03);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
+  }
 </style>

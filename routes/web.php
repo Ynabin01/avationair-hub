@@ -113,6 +113,9 @@ Route::get('/{slug}',[HomeController::class,'category'])->name('category');
 Route::get('/{category}/{subcategory}',[HomeController::class,'subcategory'])->name('subcategory');
 Route::get('/{category}/{subcategory}',[HomeController::class,'subcategory'])->name('subcategory');
 
+// whatsapp
+
+
 // nabin
 Route::get('read-more/{slug}',[HomeController::class,'ReadMore'])->name('ReadMore');
 //Route::get('/page/{slug}',[HomeController::class,'singlePage'])->name('singlepage');

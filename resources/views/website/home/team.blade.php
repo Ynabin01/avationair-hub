@@ -1,10 +1,12 @@
 <!-- Team Page Header -->
-<div class="nh-team-header">
-    <h2 class="mv-section-title">
-        <span class="mission">Meet Our</span>
-        <span class="vision"> Expert Team</span>
-    </h2>
-</div>
+ 
+ <div class="col-12 mb-5" data-aos="fade-up" data-aos-duration="1200">
+                <h2 class="mv-section-title">
+                     <span class="mission"> Meet Our </span>
+                    <span class="vision">Expert</span>
+                    <span class="values">Team  </span>
+                </h2>
+            </div> 
 
 <!-- Team Members Section -->
 <div class="container nh-team-container py-5">
@@ -40,11 +42,11 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
         @endforeach
     </div>
+    <br><br><br>
 </div>
 
 <!-- Popup Modal -->

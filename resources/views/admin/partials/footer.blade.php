@@ -1,7 +1,7 @@
 
   <!-- /.content-wrapper -->
   <footer class="main-footer text-center">
-    <strong>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Education Air Hub Nepal Pvt.Ltd. | powered by <a href="#" target="_blank"> | NABIN | </a></strong>
+    <strong>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Aviation Hub Nepal Pvt. Ltd. | powered by <a href="#" target="_blank"> | NABIN | </a></strong>
   </footer>
   
   <div class="control-sidebar-bg"></div>

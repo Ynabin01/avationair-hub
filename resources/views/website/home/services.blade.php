@@ -1,26 +1,32 @@
 <div class="container-xxl py-6" style="background-color: #fff; padding-bottom: 30px;">
     <div class="inside_body">
         <div class="container">
-            <div class="responsive-container" style="margin-top: -25px;">
-                <br>
-                <!-- <div
-                    style="text-align: center; font-weight: 700; font-size: 1.5rem; font-family: 'Poppins', sans-serif; margin-bottom: 30px;">
-                    {!! $services->long_content !!}
-                </div> -->
-                <h2 class="mv-section-title">
-                    <span class="mission">Prepare  Abroad</span>
-                    <span class="vision">for Studying</span>
-                    <span class="values">Abroad</span>
-                </h2>
-            </div>
+            <br>
+            <!-- <div class="responsive-container" style="margin-top: -25px;">
+                            <br>
+                            <h2 class="mv-section-title">
+                                <span class="mission"></span>
+                                <span class="vision"></span>
+                                <span class="values">Abroad</span>
+                            </h2>
+                        </div> -->
+                <div class="col-12 mb-5" data-aos="fade-up" data-aos-duration="1200">
+                    <h2 class="mv-section-title">
+                        <span class="mission">Prepare Abroad</span>
+                        <span class="vision">for Studying</span>
+                        <span class="values">Abroad</span>
+                    </h2>
+                </div>
 
-            <div class="row g-4" style="margin-left: 0px;">
+            <!-- Centered Row -->
+            <div class="row g-4" style="margin-left: 0px; display: flex; justify-content: center; flex-wrap: wrap;">
                 @foreach ($services->childs->sortByDesc('created_at') as $sub)
                     @if ($loop->iteration > 4)
                         @break
                     @endif
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded mobile-service-width">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s"
+                        style="display: flex; justify-content: center;">
+                        <div class="service-item rounded mobile-service-width" style="max-width: 100%;">
                             <div class="border border-dark rounded image-hover" style="padding: 10px; perspective: 1000px;">
                                 <!-- Image with hover effect -->
                                 <img src="{{$sub->banner_image}}" alt="Service Image" class="mb-3"
@@ -30,7 +36,7 @@
                                     {{$sub->caption}}
                                 </div>
                                 <div style="font-family: Poppins; color: black; font-size: 14px; text-align: justify;">
-                                    {{$sub->short_content}}
+                                    @php echo $sub->short_content; @endphp
                                 </div>
                                 <a href="{{$sub->nav_name}}/@if ($child = $sub->childs->first()){{$child->nav_name}} @endif"
                                     style="text-decoration: none;">
@@ -53,15 +59,7 @@
 </div>
 
 <style>
-    /* Prevent unwanted background on hover/focus */
-    .image-hover:hover,
-    .image-hover:focus,
-    .image-hover:active {
-        background-color: transparent;
-        outline: none;
-    }
-
-    /* Image styling */
+    /* Image Hover Effects */
     .image-hover img {
         width: 100%;
         transition: transform 0.6s ease, box-shadow 0.6s ease;
@@ -70,7 +68,6 @@
         backface-visibility: hidden;
     }
 
-    /* Hover effect: 3D fold + zoom + shadow */
     .image-hover:hover img {
         transform: rotateX(20deg) scale(1.05);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -83,5 +80,13 @@
 
     .service-item:hover {
         transform: scale(1.02);
+    }
+
+    /* Prevent unwanted background on hover/focus */
+    .image-hover:hover,
+    .image-hover:focus,
+    .image-hover:active {
+        background-color: transparent;
+        outline: none;
     }
 </style>

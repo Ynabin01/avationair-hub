@@ -2,9 +2,15 @@
 use App\Models\NavigationItems;
 ?>
 <div class="gallery-container" style="margin-bottom: 40px;">
-    <h2 class="mv-section-title">
-          <span class="mission">Gallery</span>
-    </h2>
+     
+     <div class="col-12 mb-5" data-aos="fade-up" data-aos-duration="1200">
+                <h2 class="mv-section-title">
+                     <span class="mission">  </span>
+                    <span class="vision">Gallery</span>
+                    <span class="values">  </span>
+                </h2>
+            </div> 
+
     <div class="gallery-grid">
         @foreach ($photos->childs->sortByDesc('updated_at') as $photo)
             @if ($loop->iteration < 5)
@@ -17,7 +23,7 @@ use App\Models\NavigationItems;
                             <!-- Transparent Red Ribbon -->
                             <div class="corner-ribbon"></div>
 
-                            <img src="website/img/about.PNG" alt="{{$photo->caption}}">
+                            <img src="{{ $photo->banner_image }}" alt="{{$photo->caption}}">
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <h3>{{$photo->caption}}</h3>
@@ -25,7 +31,7 @@ use App\Models\NavigationItems;
                                         {{ \Carbon\Carbon::parse($photo->updated_at)->format('M d, Y') }}</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </a>
                 </div>
             @endif

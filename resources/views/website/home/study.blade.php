@@ -1,193 +1,91 @@
-<div class="container-xxl py-6 aus-abroad">
-    <div class="main-container">
-         
-            <h2 class="mv-section-title">
-                      <span class="mission">Explore Top Destinations </span>
-                    <span class="vision">To Study</span> 
-                    <span class="values">Abroad</span>
+<div class="py-5 abroad-section">
+    <div class="container">
+        <div class="abroad-container">
+            <!-- Section Header -->
+            <div class="col-12 mb-5" data-aos="fade-up" data-aos-duration="1200">
+                <h2 class="mv-section-title">
+                      <span class="mission">Top Global </span>
+                    <span class="vision">Destinations for</span> 
+                    <span class="values">Studying Abroad</span>
                 </h2>
-       
-        <!-- Tabs -->
-        <div class="homestudy-list nav" id="myTab" role="tablist">
-            @foreach ($abroad as $sub)
-                <a href="#abroad{{$sub->id}}" data-bs-toggle="tab" data-bs-target="#abroad{{$sub->id}}"
-                    class="homestudy-item @if($loop->first) active @endif">
-                    <div class="homestudy-name @if($loop->first) active @endif">{{$sub->caption}}</div>
-                </a>
-            @endforeach
-        </div>
+            </div>
 
-        <!-- Tab Content -->
-        <div class="tab-content">
-            @foreach ($abroad as $subsub)
-                <div id="abroad{{$subsub->id}}" class="tab-pane @if($loop->first) active @endif">
-                    <div class="container-fluid py-5 abroad-mobile">
-                        <div class="container text-center">
-                            <!-- Image on top with 3D hover -->
-                            <div class="image-container animate-element" style="margin-top: -50px;">
-                                <img src="{{$subsub->banner_image ?? ''}}" alt="{{$subsub->caption}}" class="study-img">
-                            </div>
+            <!-- Grid of Cards -->
+            <div class="abroad-grid">
+                @foreach ($abroad as $sub)
+                    <a href="{{$sub->icon_image_caption ?? ''}}" class="abroad-card">
+                        <img src="{{$sub->banner_image ?? ''}}" alt="{{$sub->caption}}" class="abroad-card-img">
+                        <h5 class="abroad-card-title">{{$sub->caption}}</h5>
+                    </a>
+                @endforeach
+            </div>
 
-                            <!-- Content below -->
-                            <div class="kamkar animate-element">
-                                <div class="long-content" style="font-size: 18px !important;">
-                                    {{$subsub->long_content}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-            <div style="text-align: center; margin-top: 20px;"> <a href="/blog?content=blogs"
-                    style="background: linear-gradient(90deg,#e63946,#ff6b6b); border:none; color:#fff; font-weight:600; border-radius:40px; padding:8px 20px; font-size:0.9rem; text-decoration:none; transition:all 0.3s ease; display:inline-block;">
-                    View All <span style="margin-left:6px;">&rarr;</span> </a> </div>
         </div>
     </div>
 </div>
-</div>
 
 <style>
-    /* ===== Section Background Image ===== */
-    .aus-abroad {
-        position: relative;
-        margin: 50px 0;
+    /* Section */
+    .abroad-section {
+        background: linear-gradient(135deg, #f9f9f9, #f1f1f1);
         font-family: 'Montserrat', sans-serif;
-        overflow: hidden;
-        color: #fff;
-        padding: 60px 0;
-        min-height: 600px;
-        /* ensures section is tall enough for background */
-        background-image: url('/website/img/bgi.jpg');
-        /* replace with your image path */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
-    /* Optional overlay for better text readability */
-    .aus-abroad::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.4);
-        /* adjust opacity if needed */
-        z-index: 0;
+    .abroad-title {
+        margin-bottom: 30px;
+        font-weight: 700;
+        color: #222;
     }
 
-    .aus-abroad>.main-container {
-        position: relative;
-        z-index: 1;
+    /* Grid Layout */
+    .abroad-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
     }
 
-    /* ===== Tabs ===== */
-    .homestudy-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 50px;
-    }
-
-    .homestudy-item {
-        padding: 12px 25px;
-        border-radius: 30px;
-        background-color: rgba(255, 255, 255, 0.8);
-        cursor: pointer;
-        text-align: center;
-        transition: 0.3s;
-        color: #000;
-    }
-
-    .homestudy-item.active,
-    .homestudy-item:hover {
-        background-color: #CF1312;
-        color: #fff;
-    }
-
-    /* ===== Image ===== */
-    .image-container {
-        perspective: 1000px;
-        margin-bottom: 5px;
-    }
-
-    .study-img {
-        width: 60%;
-        max-width: 400px;
-        border-radius: 12px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Cards */
+    .abroad-card {
         display: block;
-        margin: 0 auto;
-        cursor: pointer;
+        text-decoration: none;
+        background: #fff;
+        border-radius: 15px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: inherit;
     }
 
-    .image-container:hover .study-img {
-        transform: rotateY(10deg) rotateX(5deg) scale(1.05);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    .abroad-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    /* ===== Content ===== */
-    .kamkar {
-        margin-top: 5px;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: 0.8s ease-out;
+    .abroad-card-img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 10px;
     }
 
-    .animate-element.show {
-        opacity: 1;
-        transform: translateY(0) scale(1);
+    .abroad-card-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
     }
 
-    /* ===== Responsive ===== */
-    @media(max-width: 991px) {
-        .study-img {
-            width: 80%;
+    /* Responsive */
+    @media(max-width: 768px) {
+        .abroad-card-img {
+            height: 140px;
         }
 
-        .homestudy-item {
-            padding: 10px 20px;
-            font-size: 14px;
+        .abroad-card-title {
+            font-size: 1rem;
         }
     }
 </style>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const tabs = document.querySelectorAll('.homestudy-item');
-
-        function animatePane(pane) {
-            const elements = pane.querySelectorAll('.animate-element');
-            elements.forEach((el, index) => {
-                el.classList.remove('show');
-                setTimeout(() => { el.classList.add('show'); }, index * 150);
-            });
-        }
-
-        // Animate first active pane on load
-        const firstPane = document.querySelector('.tab-pane.active');
-        if (firstPane) animatePane(firstPane);
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = this.getAttribute('data-bs-target');
-
-                // Toggle tab active class
-                tabs.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-
-                // Show corresponding tab content
-                document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-                const pane = document.querySelector(target);
-                pane.classList.add('active');
-
-                // Animate newly active pane
-                animatePane(pane);
-            });
-        });
-    });
-</script>

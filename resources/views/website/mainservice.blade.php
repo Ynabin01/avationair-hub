@@ -29,12 +29,12 @@
                             <div class="service-item p-3">
                                 <img src="{{ $sub->banner_image }}" alt="Service Image" class="service-img mb-2">
                                 <div class="service-caption">{{ $sub->caption }}</div>
-                                <div class="service-desc">{{ $sub->short_content }}</div>
+                                <div class="service-desc">@php echo $sub->short_content; @endphp </div>
                                 <a href="{{ $sub->nav_name }}/@if ($child = $sub->childs->first()){{ $child->nav_name }} @endif"
                                     style="text-decoration: none;">
                                     <div class="learn-more">
                                         <span>Learn More</span>
-                                        <i class="fas fa-arrow-right"></i>
+                                        <i class="fas fa-arrow-right"></i> 
                                     </div>
                                 </a>
                             </div>
@@ -73,7 +73,7 @@
 
         .service-img {
             width: 100%;
-            height: 180px;
+            height: 250px;
             object-fit: cover;
             border-radius: 10px;
         }
@@ -103,7 +103,7 @@
             gap: 8px;
             margin-top: 15px;
             cursor: pointer;
-            color: #CF1312;
+            color: rgba(18, 62, 207, 1);
             font-size: 14px;
             font-family: Inter, sans-serif;
             font-weight: 500;
@@ -112,7 +112,7 @@
 
         .learn-more:hover {
             gap: 15px;
-            color: #a50f0e;
+            color: rgba(18, 62, 207, 1);
         }
 
         /* Responsive Fixes */
